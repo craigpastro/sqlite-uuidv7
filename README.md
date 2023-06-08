@@ -15,11 +15,7 @@ $ sqlite3
 > .load uuidv7.so
 > select uuid_generate_v7();
 018898f3-3067-703b-8292-e2def527c6b4
-> sqlite> select quote(uuid_generate_v7_bytes());
+> select quote(uuid_generate_v7_bytes());
 X'018898F33745703BA7618E0C33AECF3E'
 > .quit
 ```
-
-## Tests
-
-Yes, I should add tests.
