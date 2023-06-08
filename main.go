@@ -10,7 +10,7 @@ import (
 type v7String struct{}
 
 func (*v7String) Args() int           { return 0 }
-func (*v7String) Deterministic() bool { return true }
+func (*v7String) Deterministic() bool { return false }
 func (*v7String) Apply(ctx *sqlite.Context, values ...sqlite.Value) {
 	u, err := uuid.NewV7()
 	if err != nil {
@@ -24,7 +24,7 @@ func (*v7String) Apply(ctx *sqlite.Context, values ...sqlite.Value) {
 type v7Byte struct{}
 
 func (*v7Byte) Args() int           { return 0 }
-func (*v7Byte) Deterministic() bool { return true }
+func (*v7Byte) Deterministic() bool { return false }
 func (*v7Byte) Apply(ctx *sqlite.Context, values ...sqlite.Value) {
 	u, err := uuid.NewV7()
 	if err != nil {
